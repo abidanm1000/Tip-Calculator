@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgba(173, 235, 229, 0.692);
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Ubuntu Mono', monospace;
+    /* border: black solid 1px; */
+}
+
+a {
+    text-decoration: none;
+}
+
+h5 {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.container {
+    width: 900px;
+    height: 600px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+#app-title {
+    padding-bottom: 40px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 10px;
+    color: rgba(52, 129, 122, 0.692);
+}
+
+.main {
+    border-radius: 20px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    width: 100%;
+    height: 100%;
+}
+
+.calculator {
+    width: 50%;
+    margin: 15px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    font-size: 24px;
+}
+
+#bill-container, #people-container {
+    /* border: green solid 1px; */
+    display: flex;
+    background-color: rgba(233, 240, 239, 0.692);
+    border-radius: 5px;
+    color: rgb(189, 189, 189);
+    transition: all 400ms ease;
+}
+
+#bill-container:hover, #people-container:hover {
+    box-shadow: rgb(20, 175, 142) 0px 0px 2px 2px;
+}
+
+#bill-container p, #people-container p {
+    padding: 10px;
+}
+
+#bill-container input, #people-container input {
+    /* border: hotpink solid 1px; */
+    width: 100%;
+    padding: 10px;
+    text-align: right;
+    background-color: transparent;
+    border: none;
+    border-radius: 5px;
+    -webkit-appearance: none;
+    font-size: 24px;
+    font-family: 'Ubuntu Mono', monospace;
+    color: rgb(7, 92, 73);
+    font-weight: 700;
+}
+
+#bill-container input:focus, #people-container input:focus {
+    outline: none;
+}
+
+#bill-container input::-webkit-outer-spin-button, #bill-container input::-webkit-inner-spin-button, #people-container input::-webkit-outer-spin-button, #people-container input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.tip-container {
+    display: flex;
+    flex-flow: row wrap;
+    /* border: tomato solid 1px; */
+}
+
+.tip-button {
+    font-family: 'Ubuntu Mono', monospace;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 15px;
+    background-color: rgb(7, 92, 73);
+    border-radius: 5px;
+    color: white;
+    margin: 5px 10px 5px 0;
+    width: 120px;
+    text-align: center;
+    transition: all 400ms ease;
+}
+
+.tip-button:hover {
+    box-shadow: rgb(173, 235, 229) 0px 0px 0px 3px;
+    color: rgb(20, 175, 142);
+}
+
+#custom-tip {
+    background-color: rgba(233, 240, 239, 0.692);
+    color: rgb(7, 92, 73);
+}
+
+.custom-tip {
+    background-color: rgba(233, 240, 239, 0.692);
+    color: rgb(7, 92, 73);
+    font-family: 'Ubuntu Mono', monospace;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 5px 10px 5px 0;
+    width: 120px;
+    text-align: center;
+}
+
+.custom-tip:focus {
+    outline: none;
+}
+
+.custom-tip::-webkit-outer-spin-button, .custom-tip::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.tip-button:active, #custom-tip:active {
+    background-color: rgb(20, 175, 142);
+    color: rgb(7, 92, 73);
+}
+
+.display {
+    width: 50%;
+    background-color: rgb(7, 92, 73);
+    padding: 30px;
+    border-radius: 20px;
+    color: white;
+    margin: 15px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+}
+
+.tip-amount, .total-person {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: tomato solid 1px; */
+    padding: 10px;
+}
+
+.tip-amount p:nth-child(2), .total-person p:nth-child(2) {
+    color: rgb(20, 175, 142);
+}
+
+.quantity {
+    font-size: 48px;
+    color: rgb(20, 175, 142);
+}
+
+#reset {
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgb(20, 175, 142);
+    color: rgb(7, 92, 73);
+    text-transform: uppercase;
+    font-size: 25px;
+    transition: all 400ms ease;
+}
+
+#reset:hover {
+    color: white;
+}
+
+#reset:active {
+    background-color: rgba(233, 240, 239, 0.692);
+    color: rgb(7, 92, 73);
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1 id="app-title">Spli<br>tter</h1>
+        <div class="main">
+            <div class="calculator">
+                <div class="amount">
+                    <h5>Bill</h5>
+                    <div id="bill-container">
+                        <p>$</p>
+                        <input id="bill-number" type="number" placeholder="0" required>
+                    </div>
+                </div>
+                <div class="tip">
+                    <h5>Select Tip %</h5>
+                    <div class="tip-container">
+                        <button class="tip-button" value=".05" id="tip5">5%</button>
+                        <button class="tip-button" value=".10" id="tip10">10%</button>
+                        <button class="tip-button" value=".15" id="tip15">15%</button>
+                        <button class="tip-button" value=".25" id="tip25">25%</button>
+                        <button class="tip-button" value=".50" id="tip50">50%</button>
+                        <button class="tip-button" id="custom-tip">Custom</button>
+                        <input type="number" class="custom-tip" id="custom-tip-input" placeholder="0%" hidden>
+                    </div>
+                </div>
+                <div class="people">
+                    <h5>Number of People</h5>
+                    <div id="people-container">
+                        <p>#</p>
+                        <input id="people" type="number" placeholder="0" required>
+                    </div>
+                </div>
+            </div>
+            <div class="display">
+                <div id="total-display">
+                    <div class="tip-amount">
+                        <div>
+                            <p>Tip Amount</p>
+                            <p>/ person</p>
+                        </div>
+                        <p class="quantity" id="tip-per-person">$0.00</p>
+                    </div>
+                    <div class="total-person">
+                        <div>
+                            <p>Total</p>
+                            <p>/ person</p>
+                        </div>
+                        <p class="quantity" id="total-per-person">$0.00</p>
+                    </div>
+                </div>
+                <a href=""><div id="reset">Reset</div></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
