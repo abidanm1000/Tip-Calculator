@@ -221,11 +221,19 @@ h5 {
         align-items: center;
         height: 100%;
         width: 100%;
+        padding: 10px;
+        text-align: center;
+        /* border: black solid 1px; */
     }
 
     .calculator, .display {
         /* border: black solid 1px; */
-        width: 90%;
+        width: 100%;
+    }
+
+    .tip-container {
+        display: flex;
+        justify-content: center;
     }
 
     .amount, .tip, .people {
