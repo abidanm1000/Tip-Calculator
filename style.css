@@ -231,4 +231,16 @@ h5 {
     .amount, .tip, .people {
         margin-bottom: 40px;
     }
+
+    .display {
+        padding: 15px;
+    }
+
+    .tip-amount, .total-person {
+        padding: 0;
+    }
+
+    #reset {
+        margin-top: 40px;
+    }
 }
