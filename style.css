@@ -249,7 +249,9 @@ h5 {
 @media only screen and (max-width: 700px) {
     body {
         height: auto;
+        /* width: 100%; */
         margin: 20px;
+        flex-flow: row wrap;
     }
 
     .container {
@@ -292,5 +294,20 @@ h5 {
 
     #reset {
         margin-top: 40px;
+    }
+
+    .mode-container {
+        position: static;
+        margin-bottom: 60px;
+        width: 100px;
+        height: 40px;
+    }
+    
+    #sun {
+        margin-right: 10px;
+    }
+
+    #moon {
+        margin-left: 10px;
     }
 }
