@@ -10,10 +10,15 @@
     <script src="script.js" defer></script>
 </head>
 <body>
+    <div class="mode-container">
+        <img id='moon' src="images/icon-sun.svg" alt="moon icon" hidden>
+        <div id="mode-switch">Light</div>
+        <img id="sun" src="images/icon-moon.svg" alt="sun icon">
+    </div>
     <div class="container">
         <h1 id="app-title">Spli<br>tter</h1>
-        <div class="main">
-            <div class="calculator">
+        <div class="main" id="calculator">
+            <div class="calculator" >
                 <div class="amount">
                     <h5>Bill</h5>
                     <div id="bill-container">

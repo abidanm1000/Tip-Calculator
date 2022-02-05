@@ -1,3 +1,16 @@
+let lightMode = {
+    backgroundColor: 'rgba(173, 235, 229, 0.692)',
+    calculatorColor: 'white',
+    fontColor: 'black'
+}
+
+let darkMode = {
+    backgroundColor: 'rgb(16, 17, 17)',
+    calculatorColor: 'rgb(73, 73, 73)',
+    fontColor: 'white'
+}
+
+
 let bill = document.getElementById('bill-number');
 let tip5 = document.getElementById('tip5');
 let tip10 = document.getElementById('tip10');
@@ -10,6 +23,12 @@ let people = document.getElementById('people');
 let tipPerPerson = document.getElementById('tip-per-person');
 let totalPerPerson = document.getElementById('total-per-person');
 let reset = document.getElementById('reset');
+let modeSwitch = document.getElementById('mode-switch');
+let sun = document.getElementById('sun');
+let moon = document.getElementById('moon');
+let body = document.querySelector('body');
+let calculator = document.getElementById('calculator');
+let switchOn = false;
 
 let splitter = (amount, percent, quantity) => {
     let tipTotal = amount * percent;
@@ -68,4 +87,32 @@ reset.addEventListener('click', (e) => {
     customTip.hidden = false;
     customTipInput.hidden = true;
     customTipInput.value = '';
+})
+
+
+
+modeSwitch.addEventListener('click', () => {
+    if (switchOn === false) {
+        modeSwitch.innerHTML = 'Dark';
+        modeSwitch.style.backgroundColor = 'black'
+        modeSwitch.style.color = 'white';
+        // modeSwitch.style.border = 'white 3px solid';
+        sun.hidden = true
+        moon.hidden = false
+        switchOn = true
+        body.style.backgroundColor = lightMode.backgroundColor;
+        calculator.style.backgroundColor = lightMode.calculatorColor;
+        calculator.style.color = lightMode.fontColor;
+    } else {
+        modeSwitch.innerHTML = 'Light';
+        modeSwitch.style.backgroundColor = 'white'
+        modeSwitch.style.color = 'black';
+        // modeSwitch.border = 'white 3px solid'
+        sun.hidden = false
+        moon.hidden = true
+        switchOn = false
+        body.style.backgroundColor = darkMode.backgroundColor;
+        calculator.style.backgroundColor = darkMode.calculatorColor;
+        calculator.style.color = darkMode.fontColor;
+    }
 })
