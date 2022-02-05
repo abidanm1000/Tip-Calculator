@@ -10,7 +10,6 @@ let darkMode = {
     fontColor: 'white'
 }
 
-
 let bill = document.getElementById('bill-number');
 let tip5 = document.getElementById('tip5');
 let tip10 = document.getElementById('tip10');
@@ -23,6 +22,7 @@ let people = document.getElementById('people');
 let tipPerPerson = document.getElementById('tip-per-person');
 let totalPerPerson = document.getElementById('total-per-person');
 let reset = document.getElementById('reset');
+let switchContainer = document.getElementById('switch-container');
 let modeSwitch = document.getElementById('mode-switch');
 let sun = document.getElementById('sun');
 let moon = document.getElementById('moon');
@@ -96,23 +96,23 @@ modeSwitch.addEventListener('click', () => {
         modeSwitch.innerHTML = 'Dark';
         modeSwitch.style.backgroundColor = 'black'
         modeSwitch.style.color = 'white';
-        // modeSwitch.style.border = 'white 3px solid';
-        sun.hidden = true
-        moon.hidden = false
+        switchContainer.style.border = 'rgb(7, 92, 73) solid 3px'
+        sun.hidden = false
+        moon.hidden = true
+        body.style.backgroundColor = darkMode.backgroundColor;
+        calculator.style.backgroundColor = darkMode.calculatorColor;
+        calculator.style.color = lightMode.darkColor;
         switchOn = true
-        body.style.backgroundColor = lightMode.backgroundColor;
-        calculator.style.backgroundColor = lightMode.calculatorColor;
-        calculator.style.color = lightMode.fontColor;
     } else {
         modeSwitch.innerHTML = 'Light';
         modeSwitch.style.backgroundColor = 'white'
         modeSwitch.style.color = 'black';
-        // modeSwitch.border = 'white 3px solid'
-        sun.hidden = false
-        moon.hidden = true
+        switchContainer.style.border = 'black solid 3px'
+        sun.hidden = true
+        moon.hidden = false
+        body.style.backgroundColor = lightMode.backgroundColor;
+        calculator.style.backgroundColor = lightMode.calculatorColor;
+        calculator.style.color = lightMode.fontColor;
         switchOn = false
-        body.style.backgroundColor = darkMode.backgroundColor;
-        calculator.style.backgroundColor = darkMode.calculatorColor;
-        calculator.style.color = darkMode.fontColor;
     }
 })
