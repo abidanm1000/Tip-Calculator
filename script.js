@@ -101,7 +101,7 @@ modeSwitch.addEventListener('click', () => {
         moon.hidden = true
         body.style.backgroundColor = darkMode.backgroundColor;
         calculator.style.backgroundColor = darkMode.calculatorColor;
-        calculator.style.color = lightMode.darkColor;
+        calculator.style.color = darkMode.fontColor;
         switchOn = true
     } else {
         modeSwitch.innerHTML = 'Light';
